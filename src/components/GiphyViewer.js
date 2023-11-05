@@ -27,7 +27,6 @@ const GiphyViewer = () => {
     axios
       .get(`${GIPHY_URL}/trending?api_key=${API_KEY}&limit=${limit}`)
       .then((response) => {
-        console.log(response.data.data);
         setGifs(response.data.data);
       })
       .catch((error) => {
@@ -47,7 +46,6 @@ const GiphyViewer = () => {
     axios
     .get(`${GIPHY_URL}/random?api_key=${API_KEY}&q=${term}&limit=${limit}`)
     .then((response) => {
-      console.log(response.data.data);
       setGifs([response.data.data]);
     })
     .catch((error) => {
@@ -72,7 +70,6 @@ const GiphyViewer = () => {
     axios
       .get(`${GIPHY_URL}/search?api_key=${API_KEY}&q=${term}&limit=${limit}`)
       .then((response) => {
-        console.log(response.data.data);
         setGifs(response.data.data);
       })
       .catch((error) => {
